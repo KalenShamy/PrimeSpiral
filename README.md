@@ -1,5 +1,5 @@
 # PrimeSpiral
-This is a prime spiral inspired by The Coding Train on YouTube
+A prime spiral inspired by The Coding Train on YouTube
 
 ---
 
