@@ -46,7 +46,7 @@ void setup() {
   }
   
   // uncomment if you want to save the result
-  // save("primeSpiral.png")
+  // save("primeSpiral.png");
 }
 
 boolean isPrime(int num) {
