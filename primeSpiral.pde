@@ -5,13 +5,13 @@ int px;
 int py;
 int lpx;
 int lpy;
-int step = 10;
+int step = 10; // change density
 int dx = step;
 int dy = 0;
 int end;
 
 void setup() {
-  size(500, 500);
+  size(500, 500); // change output size
   background(100,150,255);
   px = width/2;
   py = height/2;
