@@ -49,7 +49,7 @@ void setup() {
   // save("primeSpiral.png");
 }
 
-boolean isPrime(int num) {
+boolean isPrime(float num) {
   boolean prime = true;
   for (int i = 2; i <= sqrt(num); i++) {
     if (num % i == 0) prime = false;
@@ -57,8 +57,44 @@ boolean isPrime(int num) {
   return prime && num > 1;
 }
 
+boolean notPrime(float num) {
+  boolean prime = true;
+  for (int i = 2; i <= sqrt(num); i++) {
+    if (num % i == 0) prime = false;
+  }
+  return !(prime && num > 1);
+}
+
 boolean perfectSqr(int num) {
   return sq(floor(sqrt(num))) == num;
+}
+
+boolean eulersPrimePoly(float num) {
+  float lastSeenNum = 0;
+  int numsSeen = 0;
+  while (lastSeenNum < num) {
+    numsSeen++;
+    if (isPrime(sq(numsSeen)-numsSeen+41)) {
+      lastSeenNum = sq(numsSeen)-numsSeen+41;
+    }
+  }
+  return lastSeenNum == num;
+}
+
+boolean eulersPrimePolyOutliers(float num) {
+  float lastSeenNum = 0;
+  int numsSeen = 0;
+  while (lastSeenNum < num) {
+    numsSeen++;
+    if (!isPrime(sq(numsSeen)-numsSeen+41)) {
+      lastSeenNum = sq(numsSeen)-numsSeen+41;
+    }
+  }
+  return lastSeenNum == num;
+}
+
+boolean divisibleBy(float num, float denominator) {
+  return (num/denominator)%1 == 0;
 }
 
 void turn() {
