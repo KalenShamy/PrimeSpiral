@@ -23,7 +23,7 @@ void setup() {
     strokeWeight(step/10);
     stroke(255,255,255,75);
     line(px, py, lpx, lpy);
-    if (isPrime(i-1)) {
+    if (isPrime(i-1) && i > 1) {
       stroke(255);
       strokeCap(ROUND);
       strokeWeight(step/2);
